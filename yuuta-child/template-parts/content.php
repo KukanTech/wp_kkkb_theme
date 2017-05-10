@@ -14,20 +14,16 @@
 <?php endif; ?>
 
 	<div class="hentry__inside">
-
 		<header class="entry-header">
-			
 			<?php if ( is_sticky() ) { ?>
 				<span class="sticky-tag">
 					<?php echo esc_html_e( 'Featured', 'yuuta' ); ?>
 				</span>
 			<?php } ?>	
-			
 			<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+      <!-- 投稿日時の表示 -->
 			<?php	yuuta_posted_on(); ?>		
-			
 			<hr>
-
 		</header><!-- .entry-header -->
 
 		<div class="entry-content">				
@@ -41,23 +37,16 @@
 		</div><!-- .entry-content -->	
 
 		<footer class="entry-footer">
-
 			<?php if( ! is_single() && ! is_page() ) { ?>
-
 				<?php yuuta_read_leave_comments(); ?>
-
 			<?php } else { ?>
-
 				<?php if ( 'post' == get_post_type() ) : ?>
 					<div class="entry-meta">					
 						<?php yuuta_entry_footer(); ?>
 					</div><!-- .entry-meta -->
 				<?php endif; ?>
-
 			<?php } ?>
-
 		</footer><!-- .entry-footer -->
-
 	</div>
 	
 	<div class="overlay light-dark"></div>	
