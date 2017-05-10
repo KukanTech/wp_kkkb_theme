@@ -36,6 +36,7 @@ get_header(); ?>
         $option .= '<div class="entry-content">';
         $option .= $p->post_content;
         $option .= '</div>';
+        $option .= '</div>';
         echo $option;
       }
     ?>
